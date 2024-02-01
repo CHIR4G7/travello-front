@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { Pins_Context } from "../store/Pin_objs";
 import Register from "./Register";
 import Login from "./Login";
+import './MapArea.css'
 
 const MapArea = () => {
 
@@ -78,16 +79,20 @@ const MapArea = () => {
             onClose={() => setcurrentPlaceId(null)}
           >
             <div className="popupinfo">
-              <label>Place</label>
-              <h4 className="place">{currentPlaceId.title}</h4>
-              <label>Review</label>
-              <span>{currentPlaceId.description}</span>
-              <label>Rating</label>
-              <span>{currentPlaceId.rating}</span>
-              <label>Information</label>
-              <span>all about this sector.</span>
-              <label>Create by :</label>
-              <span>{currentPlaceId.username}</span>
+              <label className="info-place">Place : </label>
+              <span className="place">{currentPlaceId.title}</span>
+              <br></br>
+              <label className="info-review">Review : </label>
+              <span className="review">{currentPlaceId.description}</span>
+              <br></br>
+              <label className="info-rating">Rating : </label>
+              <span className="rating">{currentPlaceId.rating}</span>
+              <br></br>
+              <label className="info-info">Information : </label>
+              <span className="info">all about this sector.</span>
+              <br></br>
+              <label className="info-by">Create by :</label>
+              <span className="by">{currentPlaceId.username}</span>
             </div>
           </Popup>
         )}
@@ -102,7 +107,7 @@ const MapArea = () => {
             closeOnClick={false}
             onClose={() => setNewPlaceId(null)}
           >
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="pop-form">
               <label>place : </label>
               <input
                 type="text"
@@ -110,16 +115,20 @@ const MapArea = () => {
                 name="title"
                 ref={title}
               />
+              <br></br>
               <label>Reviews : </label>
               <input
                 type="text"
                 placeholder="your review"
                 name="description"
                 ref={description}
+                className="rate"
               />
+              <br></br>
               <label>Rating : </label>
               <input type="number" max={5} min={0} name="rating" ref={rating} />
-              <button type="submit">Add</button>
+              <br></br>
+              <center><button className='add' type="submit">Add</button></center>
             </form>
           </Popup>
         )}

@@ -14,6 +14,7 @@ const Register = (props) => {
     const [failure,setFailure] = useState(false);
 
     const context = useContext(Pins_Context);
+    const url = context.url;
     
 
     const handleReg = async (event)=>{
@@ -25,7 +26,7 @@ const Register = (props) => {
                 }
         try{
             
-            const response = await axios.post('/api/users/register',newUser);
+            const response = await axios.post(`${url}/api/users/register`,newUser);
             // console.log(response)
             setFailure(false);
             setSuccess(true);

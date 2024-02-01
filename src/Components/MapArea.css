@@ -1,0 +1,40 @@
+.popupinfo{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.popupinfo span{
+    margin: 3px;
+    font-size: medium;
+
+}
+.popupinfo label{
+    font-size: large;
+    display: inline;
+    margin: 3px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.pop-form
+{
+    width: 200px;
+    height: 160px;
+}
+.pop-form label{
+    margin: 10px;
+    font-size: large;
+}
+.pop-form input{
+    margin: 10px;
+}
+.pop-form .rate{
+    width: 50px;
+}
+.add{
+    width: 40px;
+    height: 25px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+}

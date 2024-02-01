@@ -18,7 +18,8 @@ export const Pins_Context = createContext({
     setShowRegister: ()=>{},
     setCurrentUser: ()=>{},
     storage : null,
-    handleLogOut: ()=>{}
+    handleLogOut: ()=>{},
+    url: null
 })
 
 export const Pins_Context_Provider = ({children})=>{
@@ -29,12 +30,13 @@ export const Pins_Context_Provider = ({children})=>{
     const [showRegister,setShowRegister] = useState(false);
   const [showLogin,setShowLogin] = useState(false);
   const storage = window.localStorage;
+  const url = 'https://travelloapi.onrender.com'
 
     useEffect(() => {
         const getPins = async () => {
           try {
             const response = await axios.get(
-              "/api/pin/getallpins"
+              `${url}/api/pin/getallpins`
             );
             setPins(response.data);
           } catch (err) {
@@ -70,7 +72,7 @@ export const Pins_Context_Provider = ({children})=>{
           };
           try {
             const response = await axios.post(
-              "/api/pin/create",
+              `${url}/api/pin/create`,
               newPin
             );
             setPins([...pins, newPin]);
@@ -101,7 +103,8 @@ export const Pins_Context_Provider = ({children})=>{
             setShowRegister: setShowRegister,
             setCurrentUser: setCurrentUser,
             storage: storage,
-            handleLogOut : handleLogOut
+            handleLogOut : handleLogOut,
+            url: url
         }}>
             {children}
         </Pins_Context.Provider>

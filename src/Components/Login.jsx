@@ -8,11 +8,13 @@ const Login = () => {
   const username = useRef();
   const email = useRef();
   const password = useRef();
+  
 
   const [success,setSuccess] = useState(false);
     const [failure,setFailure] = useState(false);
 
     const context = useContext(Pins_Context);
+    const url = context.url
 
   const handleLog = async (event) => {
     event.preventDefault();
@@ -22,7 +24,7 @@ const Login = () => {
       password: password.current.value,
     };
     try{
-      const response = await axios.post("/api/users/login",newUser);
+      const response = await axios.post(`${url}/api/users/login`,newUser);
            setFailure(false);
             setSuccess(true);
             context.storage.setItem("user",response.data.userName)
