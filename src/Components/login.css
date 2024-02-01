@@ -1,0 +1,20 @@
+.submit{
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+.close{
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}

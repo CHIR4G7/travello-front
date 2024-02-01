@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+
+}
+.popupinfo{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+label{
+    margin: 0px;
+    color: darkblue;
+    font-size: medium;
+    font-weight: 700;
+    text-decoration: underline;
+}

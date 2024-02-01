@@ -1,0 +1,56 @@
+body{
+    /* background-image: url('../assets/mapbg.webp'); */
+    /* color: aliceblue; */
+}
+.registerf{
+    
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+.form-container{
+    background-color: beige;
+    border: 3px solid black;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.feild label{
+    color: black;
+    text-decoration: none;
+}
+.reg-form input{
+    margin: 5px;
+    height: 30px;
+    width: 250px;
+}
+.submit{
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+.close{
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
