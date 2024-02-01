@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react'
 import './Register.css'
 import axios from 'axios';
-import { redirect } from 'react-router-dom';
+
 import { Pins_Context } from '../store/Pin_objs';
 
 const Register = (props) => {
@@ -25,7 +25,7 @@ const Register = (props) => {
                 }
         try{
             
-            const response = await axios.post('http://localhost:3245/api/users/register',newUser);
+            const response = await axios.post('/api/users/register',newUser);
             // console.log(response)
             setFailure(false);
             setSuccess(true);

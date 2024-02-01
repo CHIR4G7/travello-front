@@ -3,7 +3,7 @@ import Map, { Marker, Popup } from "react-map-gl/maplibre";
 import { FaMapMarker } from "react-icons/fa";
 import { useState } from "react";
 // import PopUpInfo from "./PopUpInfo";
-import axios from "axios";
+
 import { useContext } from "react";
 import { Pins_Context } from "../store/Pin_objs";
 import Register from "./Register";

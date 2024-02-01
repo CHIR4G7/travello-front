@@ -22,7 +22,7 @@ const Login = () => {
       password: password.current.value,
     };
     try{
-      const response = await axios.post("http://localhost:3245/api/users/login",newUser);
+      const response = await axios.post("/api/users/login",newUser);
            setFailure(false);
             setSuccess(true);
             context.storage.setItem("user",response.data.userName)

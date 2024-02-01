@@ -34,7 +34,7 @@ export const Pins_Context_Provider = ({children})=>{
         const getPins = async () => {
           try {
             const response = await axios.get(
-              "http://localhost:3245/api/pin/getallpins"
+              "/api/pin/getallpins"
             );
             setPins(response.data);
           } catch (err) {
@@ -42,7 +42,7 @@ export const Pins_Context_Provider = ({children})=>{
           }
         };
         getPins();
-      }, []);
+      }, [pins]);
 
       const handleMarkerClick = (pin) => {
         setcurrentPlaceId(pin);
@@ -70,7 +70,7 @@ export const Pins_Context_Provider = ({children})=>{
           };
           try {
             const response = await axios.post(
-              "http://localhost:3245/api/pin/create",
+              "/api/pin/create",
               newPin
             );
             setPins([...pins, newPin]);
