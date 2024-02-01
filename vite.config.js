@@ -8,11 +8,11 @@ export default defineConfig({
 		port: 7002,
 		// Get rid of the CORS error
 		proxy: {
-			"/api": {
-				target: "http://localhost:3245",
+      "/api":{
+        target: "https://travelloapi.onrender.com",
 				changeOrigin: true,
 				secure: false,
-			},
+      }
 		},
 	},
 });
